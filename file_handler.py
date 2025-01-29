@@ -8,13 +8,12 @@ def load_data(file_path: str) -> Tuple[np.ndarray, np.ndarray]:
     Retorna: X (array con todas las variables independientes), Y (variable dependiente)
     """
     if file_path.endswith('.csv'):
-        data = pd.read_csv(file_path, sep=';')  # Usar ; como separador
+        data = pd.read_csv(file_path, sep=';')  
     elif file_path.endswith(('.xlsx', '.xls')):
         data = pd.read_excel(file_path)
     else:
         raise ValueError("Formato de archivo no soportado. Use CSV o XLSX")
     
-    # Identificar columnas X y Y
     y_column = 'Y'
     x_columns = [col for col in data.columns if col.startswith('X')]
     

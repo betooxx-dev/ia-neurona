@@ -12,7 +12,7 @@ class GUI:
     def __init__(self):
         self.window = ThemedTk(theme="arc")
         self.window.title("Regresión Lineal - Neurona Simple")
-        self.window.geometry("1350x1400")
+        self.window.geometry("1350x1250")
         
         self.colors = {
             'bg': '#F5F5F5',           
